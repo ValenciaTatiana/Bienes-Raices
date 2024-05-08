@@ -11,7 +11,7 @@
         width: 3rem;
         margin-top: 3rem;
         margin-bottom: 2rem;
-        filter: invert(100%);
+        filter: invert(100%); // con este invertimos el color, el color original era negro y ya quedo blanco
 
         &:hover {
             cursor: pointer;
@@ -41,10 +41,7 @@
 
 .navegacion {
 
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear; 
+    visibility: hidden; // Para que no se vea
 
     @include tablet {
         display: flex;
@@ -88,7 +85,7 @@
 }
 
 .mostrar {
-    visibility: visible;
+    visibility: visible; // Para que se vea
     opacity: 1;
     height: auto;
 }
