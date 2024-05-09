@@ -1,21 +1,45 @@
 <?php
-    // Conectar DB
-    require '../../includes/config/database.php';
-    $db = conectarDB();
+// Conectar DB
+require '../../includes/config/database.php';
+$db = conectarDB();
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        echo "<pre>";
-        var_dump($_POST);
-        echo "</pre>";
+// Array para los mensajes de error
+$errores = [];
 
-        $titulo = $_POST['titulo'];
-        $precio = $_POST['precio'];
-        $descripcion = $_POST['descripcion'];
-        $habitaciones = $_POST['habitaciones'];
-        $wc = $_POST['wc'];
-        $estacionamiento = $_POST['estacionamiento'];
-        $vendedorId = $_POST['vendedor'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+    $titulo = $_POST['titulo'];
+    $precio = $_POST['precio'];
+    $descripcion = $_POST['descripcion'];
+    $habitaciones = $_POST['habitaciones'];
+    $wc = $_POST['wc'];
+    $estacionamiento = $_POST['estacionamiento'];
+    $vendedorId = $_POST['vendedor'];
+
+    if (!$titulo) {
+        $errores[] = "Debes añadir un titulo...";
+    }
+    if (!$precio) {
+        $errores[] = "El precio es obligatorio...";
+    }
+    if (strlen($descripcion) < 50) {
+        $errores[] = "La descripcion es obligatorio y debe tener almenos 50 caracteres...";
+    }
+    if (!$habitaciones) {
+        $errores[] = "El numero de habitaciones es obligatorio...";
+    }
+    if (!$wc) {
+        $errores[] = "El numero de baños es obligatorio...";
+    }
+    if (!$estacionamiento) {
+        $errores[] = "El numero de estacionamientos es obligatorio...";
+    }
+    if (!$vendedorId) {
+        $errores[] = "El nombre del vendedor es obligatorio...";
+    }
+
+    // Revisar que el arreglo de errores este vacio para poder guardar los datos en el formulario
+    if (empty($errores)) {
         // Insertar datos en la DB
         $query = " INSERT INTO propiedades ( titulo, precio, descripcion, habitaciones, wc, estacionamiento, vendedores_Id ) VALUES 
         ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$vendedorId') ";
@@ -23,18 +47,25 @@
         // Guardar Datos
         $resultado = mysqli_query($db, $query);
 
-        if($resultado) {
+        if ($resultado) {
             echo "Enviando datos...";
         }
     }
+}
 
-    require '../../includes/funciones.php';
-    incluirTemplate('header');
+require '../../includes/funciones.php';
+incluirTemplate('header');
 ?>
 
 <main class="contenedor seccion">
     <h1>Crear</h1>
     <a href="/admin" class="boton boton-azul">Volver</a>
+
+    <?php foreach($errores as $error): ?>
+        <div class="alerta error">
+            <?php echo $error; ?>
+        </div>
+    <?php endforeach; ?>
 
     <form class="formulario" method="POST" action="/admin/propiedades/crear.php">
         <fieldset>
@@ -70,7 +101,8 @@
         <fieldset>
             <legend>Información de Vendedor</legend>
 
-            <select  name="vendedor">
+            <select name="vendedor">
+                <option value="">-- Seleccionar --</option>
                 <option value="1">Tatiana</option>
                 <option value="2">Andres</option>
             </select>
@@ -83,5 +115,5 @@
 </main>
 
 <?php
-    incluirTemplate('footer');
+incluirTemplate('footer');
 ?>
