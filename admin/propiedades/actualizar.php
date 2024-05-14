@@ -12,7 +12,7 @@ require '../../includes/config/database.php';
 $db = conectarDB();
 
 // Consulta de los datos de la propiedad
-$consultaDataPropiedad = "SELECT * FROM propiedades WHERE id = ${id}";
+$consultaDataPropiedad = "SELECT * FROM propiedades WHERE id = {$id}";
 $resultadoDataPropiedad = mysqli_query($db, $consultaDataPropiedad);
 $propiedad = mysqli_fetch_assoc($resultadoDataPropiedad);
 
@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Insertar datos en la DB
-        $query = " UPDATE propiedades SET titulo = '${titulo}', precio = ${precio}, imagen = '${nombreUnicoImagen}', descripcion = '${descripcion}', habitaciones = ${habitaciones}, wc = '${wc}', estacionamiento = ${estacionamiento}, vendedores_id = '${vendedorId}' WHERE id = ${id} ";
+        $query = " UPDATE propiedades SET titulo = '{$titulo}', precio = {$precio}, imagen = '{$nombreUnicoImagen}', descripcion = '{$descripcion}', habitaciones = {$habitaciones}, wc = '{$wc}', estacionamiento = {$estacionamiento}, vendedores_id = '{$vendedorId}' WHERE id = {$id} ";
 
         // Guardar Datos
         $resultado = mysqli_query($db, $query);

@@ -13,7 +13,7 @@
     <header class="header <?php echo $inicio ? 'inicio' : ''; ?>">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a href="/bienesraices/index.php"> <!--Hace referecia al la pagina principal-->
+                <a href="/index.php"> <!--Hace referecia al la pagina principal-->
                     <img src="/build/img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
 
