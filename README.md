@@ -4,16 +4,24 @@
 
 ## Descripción
 
-<p>Esta página web del Festival de Música Techno & EDM presenta una galería de fotos del evento, la programación detallada con todos los artistas y bandas participantes, y la opción para la compra de pases..</p>
+<p>Esta página web de bienes raíces se presenta una amplia selección de propiedades en venta y ofrece blogs con temas interesantes relacionados con el cuidado del hogar.</p>
 
 ## ⭐Elementos principales de la página
 
-* Nombre del Festival y barra de navegación.
-* Header con video de fondo, nombre del festival y lugar y fecha del evento.
-* Descripción del evento.
-* Fechas y programación del evento.
-* Galeria de fotos.
-* Tickets y footer.
+#### Pagina Principal
+* Header con logo, barra de navegación y boton Dark-Mode.
+* Barra de navegación: Nostros, Anuncios, Blog y Contacto.
+* Sección de Más Sobre Nosotros.
+* Previsualización de algunos anuncios.
+* Atajo de contactános.
+* Previsualización de algunos Post de blogs y un testimonial.
+* Footer con barra de navegación.
+
+#### Otras paginas
+* Nosotros - Un poco de nuestra historia.
+* Anuncios - Anuncios de las propiedades.
+* Blog - Todos los post.
+* Contacto - Formulario de contacto.
 
 ### Tecnologías Utilizadas
 
@@ -21,26 +29,32 @@
   * SASS
   * JavaScript
   * Node.js
-
-### Cómo Ejecutar
-
-<p>Simplemente abre el archivo <code>index.html</code> en tu navegador web para lanzar la aplicación.</p>
-
-<p>¡Explora la galería de fotos del festival y consulta la programación completa! 🎉</p>
+  * PHP
+  * MySQL
+  * Composer
 
 # Página Web Terminada 💯
-![Festival Music](https://github.com/ValenciaTatiana/Festival-de-Musica/assets/157426277/bc266843-9087-455a-be4f-845c9cbae6a4)
+## Principal
+![Bienes Raices Home](https://github.com/ValenciaTatiana/Bienes-Raices/assets/157426277/beb70426-e7b8-4e0d-8da8-7545453ed9d5)
 #
-![Festival Music Line Up](https://github.com/ValenciaTatiana/Festival-de-Musica/assets/157426277/d415965b-9ebb-4e4b-9b3e-295bcf2720b9)
+![Bienes Raices Home2](https://github.com/ValenciaTatiana/Bienes-Raices/assets/157426277/a7975993-085b-4943-b068-6343f8a4c51a)
 #
-![Festival Music Gallery](https://github.com/ValenciaTatiana/Festival-de-Musica/assets/157426277/5454d728-eccb-404d-a44f-c7442554a5d2)
+![Bienes Raices Home3](https://github.com/ValenciaTatiana/Bienes-Raices/assets/157426277/346b3b69-60c2-4255-b2f9-f51b7eee18a0)
 #
-![Festival Music Tickest](https://github.com/ValenciaTatiana/Festival-de-Musica/assets/157426277/fca7a34e-6b96-4ba8-8d3f-2b9c5c07fd0c)
+## Nosotros
+![Nosotros](https://github.com/ValenciaTatiana/Bienes-Raices/assets/157426277/383be05b-101d-4038-8334-1b14bafd37ff)
+## Anuncios
+![Anuncios](https://github.com/ValenciaTatiana/Bienes-Raices/assets/157426277/fc78e932-9714-4f03-8eae-3c72dcc98742)
+## Blog
+![Blog](https://github.com/ValenciaTatiana/Bienes-Raices/assets/157426277/c8edac51-0481-4400-b64f-1d187733f0b7)
+## Contacto
+![Contacto](https://github.com/ValenciaTatiana/Bienes-Raices/assets/157426277/bd9979cd-b4f7-4223-a716-9806461811dd)
+## Dark-Mode
+![DarkMode](https://github.com/ValenciaTatiana/Bienes-Raices/assets/157426277/643482f4-256b-4a60-90b1-f4c325db26fc)
 
 # 📲Página Web Responsive💻
-![Festival Music respon](https://github.com/ValenciaTatiana/Festival-de-Musica/assets/157426277/cfc64f2b-9aa0-466f-bdd9-8c3013cdd9bf)
-
+![Bienes Raices respon](https://github.com/ValenciaTatiana/Bienes-Raices/assets/157426277/2cf41827-9965-45e7-9c46-1deb90ac2b74)
 
 # Certificado🏅
-_Certificado entregado por Udemy, por la finalización del **Desarrollo Web Completo con HTML5, CSS3, JS AJAX, PHP y MySQL - Udemy - Proyecto: Festival de Musica**._
+_Certificado entregado por Udemy, por la finalización del **Desarrollo Web Completo con HTML5, CSS3, JS AJAX, PHP y MySQL - Udemy - Proyecto: Bienes Raices**._
 ![Certificado](https://github.com/ValenciaTatiana/Festival-de-Musica/assets/157426277/df8226c3-f905-4b15-9ace-4351391bd967)
